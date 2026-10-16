@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-emerald-deep: #061D12;
+    --color-emerald-mid: #0B2B1B;
+    --color-emerald-light: #133D28;
+    --color-champagne: #F5EBE1;
+    --color-champagne-light: #FFF8EF;
+    --color-gold-muted: #D4AF37;
+    --color-gold-bright: #F3E5AB;
+  }
+
+  body {
+    background-color: var(--color-emerald-deep);
+    color: var(--color-champagne);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Font setup for The Black Dahlia with fallbacks */
+  @font-face {
+    font-family: 'The Black Dahlia';
+    src: url('/fonts/TheBlackDahlia.woff2') format('woff2'),
+         url('/fonts/TheBlackDahlia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'The Black Dahlia', 'Playfair Display', 'Cormorant Garamond', 'Cinzel', Didot, 'Bodoni MT', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #061D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B4D36;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #256B4B;
+}
